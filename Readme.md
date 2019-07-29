@@ -2,7 +2,7 @@
 
 Après avoir télécharger le dossier veuillez lancer la commande " Bundle install " Afin d'avoir les gems
 nécéssaire pour executer l'application, une fois fais pour lancer le programme .
-Positionnez vous dans le dossier "the_gossip_project_sinatra" et utiliser la commande shotgun "-p 4567"
+Positionnez vous dans le dossier "the_gossip_project_sinatra" et utiliser la commande "shotgun -p 4567"
 Lancer ensuite votre navigateur internet et aller sur ce lien : http://localhost:4567/  
 
 
