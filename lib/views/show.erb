@@ -1,0 +1,27 @@
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> Voici le potin numéro <%= id%> </h1>
+	<% gossips.each do |gossip| %>
+  <p> Le nom de l'auteur : <%= gossip.author%> 
+	<p> Le contenu du potin :	<%= gossip.content%> </p>
+	<a href="/edit/gossip/<%= id%>"> Modifier</a>
+	<br/>
+	<br/>
+	<% end%>
+	<a href="/">Revenir a la page principal</a>
+	<br/>
+	<br/>
+	<H2> Commentaire </H2>
+	<p> Voici les commentaire : <p>
+	<% comments.each do |commentaire| %>
+	<p><%= commentaire.id%>
+	<br/>
+	<% end%>
+	<br/>
+  <a href="/create/commentaire/<%= id%>">Ecrire un commentaire</a>
+</body>
+</html>

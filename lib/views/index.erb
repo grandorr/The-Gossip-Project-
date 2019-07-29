@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip!</h1>
+    <p> Vous voulez crée un gossip? </p>
+    <p> Il suffit de cliquer sur ce lien là : <a href="/gossips/new">Crée son gossip</a>
+<h1 class="text-center">Voici les gossips qui on été crée :</h1>
+  <br/>
+  <% gossips.each_with_index do |gossip,index| %>
+      <p>
+        <a href="/gossips/<%= (index+1) %>"><%= (index+1) %></a><br/>
+        <p> Ecrit par : </p>
+        <%= gossip.author %>
+        <br/>
+        <br/>
+      </p>
+    <% end %>
+  	
+  </body>
+</html>

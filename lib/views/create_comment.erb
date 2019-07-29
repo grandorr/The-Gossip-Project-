@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Crée un commentaire</title>
+  </head>
+  <body>
+    <h1>Crée ton commentaire </h1>
+    <p>Potin numéro <%= id %>
+    <p>Voici le potin actuel :</p>
+    <% gossips.each do |gossip| %>
+    <p> Le nom de l'auteur : <%= gossip.author%> </p>
+    <p> Le contenu du potin : <%= gossip.content%> </p>
+    <% end%>
+    <form action='/gossips/comment/new/<%=id%>' method='POST'>
+      Ecrit ton commentaire :   <input type='text' name='comment'/><br/>
+        <input type='submit'/> 
+    </form>
+    <a href="/">Retour au menu principal</a>
+  </body>
+</html>

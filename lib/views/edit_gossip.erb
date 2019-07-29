@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Modifier un potin</title>
+  </head>
+  <body>
+    <h1>Modifie un potin </h1>
+    <p>Potin numéro <%= id %>
+    <p>Voici le potin actuel :</p>
+    <% gossips.each do |gossip| %>
+    <p> Le nom de l'auteur : <%= gossip.author%> 
+    <p> Le contenu du potin : <%= gossip.content%> </p>
+    <% end%>
+    <form action='/gossips/edit/<%=id%>' method='POST'>
+      Modifie l'autheur :   <input type='text' name='gossip_author'/><br/>
+      Modifie le contenue : <input type='text' name='gossip_content'/><br/>
+        <input type='submit'/> 
+    </form>
+  </body>
+</html>
