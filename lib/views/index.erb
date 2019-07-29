@@ -1,22 +1,27 @@
 <html>
   <head>
+
+
     <title>The Gossip Project</title>
   </head>
   <body>
-    <h1>Mon super site de gossip!</h1>
-    <p> Vous voulez crée un gossip? </p>
-    <p> Il suffit de cliquer sur ce lien là : <a href="/gossips/new">Crée son gossip</a>
+    <h1><center>Mon super site de gossip!<center></h1>
+    <p><center> Vous voulez crée un gossip? </center></p>
+    <p><center> Il suffit de cliquer ici : <a href="/gossips/new"><button type="button" class="btn btn-lg btn-block btn-secondary">Crée un gossip</button></a></center>
 <h1 class="text-center">Voici les gossips qui on été crée :</h1>
-  <br/>
+  <ul>
   <% gossips.each_with_index do |gossip,index| %>
-      <p>
-        <a href="/gossips/<%= (index+1) %>"><%= (index+1) %></a><br/>
+  <li>
+      
+        <a href="/gossips/<%= (index+1) %>"><button type="button" class="btn-lg btn-block btn-warning">Voir le gossip <%= (index+1)%></button></a><br/>
         <p> Ecrit par : </p>
-        <%= gossip.author %>
+        <strong><%= gossip.author %></strong>
         <br/>
         <br/>
-      </p>
+      </li>
+      <br/>
     <% end %>
+  </ul>
   	
   </body>
 </html>

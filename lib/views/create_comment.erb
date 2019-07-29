@@ -7,13 +7,13 @@
     <p>Potin numéro <%= id %>
     <p>Voici le potin actuel :</p>
     <% gossips.each do |gossip| %>
-    <p> Le nom de l'auteur : <%= gossip.author%> </p>
-    <p> Le contenu du potin : <%= gossip.content%> </p>
+    <p> Le nom de l'auteur : <strong><%= gossip.author%> </strong></p>
+    <p> Le contenu du potin : <strong><%= gossip.content%></strong> </p>
     <% end%>
     <form action='/gossips/comment/new/<%=id%>' method='POST'>
       Ecrit ton commentaire :   <input type='text' name='comment'/><br/>
         <input type='submit'/> 
+    <a href="/"><button type="button" class="btn-lg btn-secondary">Retour</a>
     </form>
-    <a href="/">Retour au menu principal</a>
   </body>
 </html>

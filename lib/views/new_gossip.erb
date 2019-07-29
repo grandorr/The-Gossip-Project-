@@ -3,16 +3,14 @@
     <title>Créer un potin</title>
   </head>
   <body>
-    <h1>Crée un potin !</h1>
-    <p>Balance ton potin via le formulaire ci-dessous</p>
-    <form action='/gossips/new/' method='POST'>
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+    <center><h1>Crée un potin !</h1></center>
+    <p><center>Balance ton potin via le formulaire ci-dessous</center></p>
+    <center><form action='/gossips/new/' method='POST'>
+      Votre nom :  <input type='text' name='gossip_author'/><br/>
+      Ton gossip : <input type='text' name='gossip_content'/><br/>
       <input type='submit'/>
-      <br/>
-      <br/>
-      <br/>
-      <a href="/">Retour au menu principal sans remplir le formulaire</a>
+
+    <a href="/"><button type="button" class="btn btn-lg btn-block btn-secondary">Retour</button></a>
     </form>
   </body>
 </html>

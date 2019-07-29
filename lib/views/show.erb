@@ -8,20 +8,23 @@
 	<% gossips.each do |gossip| %>
   <p> Le nom de l'auteur : <%= gossip.author%> 
 	<p> Le contenu du potin :	<%= gossip.content%> </p>
-	<a href="/edit/gossip/<%= id%>"> Modifier</a>
+	<a href="/edit/gossip/<%= id%>"><button type="button" class="btn btn-lg btn-block btn-secondary">Modifier</button></a>
 	<br/>
 	<br/>
 	<% end%>
-	<a href="/">Revenir a la page principal</a>
+	<a href="/"><button type="button" class="btn btn-lg btn-block btn-secondary">Retour</button></a>
 	<br/>
 	<br/>
 	<H2> Commentaire </H2>
 	<p> Voici les commentaire : <p>
-	<% comments.each do |commentaire| %>
-	<p><%= commentaire.id%>
+	<ul>
+		<% comments.each do |commentaire| %>
+		<li>
+		<p><%= commentaire.id%></p>
+	</li>
+		<% end%>
+	</ul>
 	<br/>
-	<% end%>
-	<br/>
-  <a href="/create/commentaire/<%= id%>">Ecrire un commentaire</a>
+  <a href="/create/commentaire/<%= id%>"><button type="button" class="btn btn-lg btn-block btn-secondary">Commenter</button></a>
 </body>
 </html>
